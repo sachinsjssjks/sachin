@@ -1,0 +1,225 @@
+/* Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+/* Gradient Background and Section Padding */
+.header, .about-me, .skills, .contact {
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    text-align: center;
+    color: white;
+}
+
+.header::before, .header::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    top: -100px;
+    left: -100px;
+    z-index: 0;
+}
+
+.header::after {
+    left: auto;
+    right: -150px;
+    top: 50px;
+}
+
+.profile-photo img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #fff;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    z-index: 1;
+    position: relative;
+}
+
+.name {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 20px;
+    font-style: italic;
+    color: #ddd;
+}
+
+/* About Me Section */
+.about-me {
+    background-color: #fff;
+    text-align: center;
+    margin: 40px 0;
+    padding: 60px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.about-me:hover {
+    transform: translateY(-10px);
+}
+
+.about-me h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-me p {
+    font-size: 18px;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Skills Section */
+.skills {
+    background-color: #f4f4f9;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.skill-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+}
+
+.skill-card h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.skill-bar {
+    background-color: #e5e5e5;
+    border-radius: 25px;
+    height: 10px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.skill-level {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 100%;
+    width: 0;
+    transition: width 0.8s ease-in-out;
+}
+
+.skill-card:hover .skill-level {
+    width: 100%;
+}
+
+/* Contact Section */
+.contact {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.contact p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.contact-button {
+    background-color: #fff;
+    color: #764ba2;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.contact-button:hover {
+    background-color: #4caf50;
+    color: white;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+    position: relative;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .name {
+        font-size: 32px;
+    }
+
+    .tagline {
+        font-size: 16px;
+    }
+
+    .about-me, .skills, .contact {
+        padding: 40px 20px;
+    }
+
+    .skill-card h3 {
+        font-size: 20px;
+    }
+}
